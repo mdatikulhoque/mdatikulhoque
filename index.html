@@ -17,7 +17,7 @@
     :root{
       --bg:#0f1724;
       --card:#0b1320;
-      --muted:#93a0b1;
+      --muted:#ffffff;
       --accent:#0ea5a4;
       --glass: rgba(255,255,255,0.03);
       --max-width:1100px;
@@ -27,7 +27,7 @@
     }
     *{box-sizing:border-box}
     html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
-    body{background:linear-gradient(180deg,var(--bg) 0%, #061021 100%); color:#dbe7ef; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+    body{background:linear-gradient(180deg,var(--bg) 0%, #061021 100%); color:#ffffff; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
 
     header{position:fixed;top:0;left:0;right:0;background:linear-gradient(180deg, rgba(5,10,15,0.8), rgba(5,10,15,0.6));backdrop-filter:blur(6px);z-index:40;border-bottom:1px solid rgba(255,255,255,0.03)}
     .nav{max-width:var(--max-width);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
@@ -50,20 +50,20 @@
     .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:18px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(2,6,23,0.6);transition:transform var(--transition)}
     .card:hover{transform:translateY(-6px)}
     h2{margin:0 0 10px 0;font-size:18px}
-    p{margin:0 0 8px 0;color:var(--muted);line-height:1.45}
+    p{margin:0 0 8px 0;color:#ffffff;line-height:1.45;font-size:14px;}
 
-    .meta{font-size:13px;color:var(--muted);margin-bottom:10px}
+    .meta{font-size:13px;color:#ffffff;margin-bottom:10px}
     .list{margin:6px 0 0 0;padding:0;list-style:none}
-    .list li{padding:8px 0;border-top:1px dashed rgba(255,255,255,0.02);}
+    .list li{padding:8px 0;border-top:1px dashed rgba(255,255,255,0.06);color:#ffffff;font-size:14px;}
 
     .projects{display:flex;flex-direction:column;gap:10px}
-    .project{padding:10px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.02)}
+    .project{padding:10px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.02);color:#ffffff;font-size:14px;}
 
     .contact-form{display:grid;gap:8px}
-    .contact-form input, .contact-form textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;border:none;cursor:pointer}
+    .contact-form input, .contact-form textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:#ffffff;font-size:14px;}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;border:none;cursor:pointer;font-size:14px;}
 
-    footer{max-width:var(--max-width);margin:0 auto 40px;padding:8px 20px;color:var(--muted);text-align:center}
+    footer{max-width:var(--max-width);margin:0 auto 40px;padding:8px 20px;color:#ffffff;text-align:center;font-size:14px;}
 
     .nav a[data-target].active{box-shadow:0 8px 30px rgba(14,165,164,0.08)}
 
@@ -74,8 +74,7 @@
     }
 
     /* Requested changes */
-    strong{color: #fbbf24;}   /* Amber for strong */
-    .small{color:#ffffff; font-size:14px;} /* White and slightly larger */
+    strong{color: #06b6d4;}   /* Cyan for strong */
   </style>
 </head>
 <body>
@@ -84,7 +83,7 @@
     <div class="nav">
       <div class="brand">
         <h1>Md Atikul Hoque Prodhan</h1>
-        <div class="small">Cybercrime Investigator</div>
+        <div style="color:#ffffff;font-size:14px;">Cybercrime Investigator</div>
       </div>
 
       <nav aria-label="Primary">
@@ -108,7 +107,7 @@
         <h2>About Me</h2>
         <div class="meta">Cybercrime Investigator • Digital Forensics • Law Enforcement</div>
         <p>I am a Cybercrime Investigator with extensive experience in engineering and law enforcement. My journey began as a Lecturer at Dhaka International University, then as a Maintenance Engineer at KAFCO, Japan. Currently, I serve in the Bangladesh Police, specializing in cybercrime investigations and digital forensics, with advanced training at the FBI Academy in Virginia.</p>
-        <p class="small">FBI National Academy Graduate • Executive MBA (IBA) • BSc EEE (IUT)</p>
+        <p style="color:#ffffff;font-size:14px;">FBI National Academy Graduate • Executive MBA (IBA) • BSc EEE (IUT)</p>
       </section>
 
       <!-- EDUCATION -->
@@ -129,9 +128,9 @@
       <section id="experience" class="card" tabindex="0">
         <h2>Professional Experience</h2>
         <ul class="list">
-          <li><strong>Bangladesh Police</strong> — Additional Superintendent of Police<br><span class="meta">January 2013 - Present (Cybercrime Investigator since 2020)</span><p class="small">Cybercrime investigations, digital forensics, data analyst and law enforcement capacity building.</p></li>
-          <li><strong>FBI National Academy, Quantico</strong> — FBI National Academy Graduate<br><span class="meta">Advanced Leadership Training | July – September 2024</span><p class="small">Specialized in leadership, investigative techniques, and global law enforcement cooperation.</p></li>
-          <li><strong>Karnaphuli Fertilizer Company (KAFCO)</strong> — Maintenance Engineer<br><span class="meta">Jan 2011 – Jan 2013</span><p class="small">Industrial automation, plant maintenance, and process optimization.</p></li>
+          <li><strong>Bangladesh Police</strong> — Additional Superintendent of Police<br><span class="meta">January 2013 - Present (Cybercrime Investigator since 2020)</span><p style="color:#ffffff;font-size:14px;">Cybercrime investigations, digital forensics, data analyst and law enforcement capacity building.</p></li>
+          <li><strong>FBI National Academy, Quantico</strong> — FBI National Academy Graduate<br><span class="meta">Advanced Leadership Training | July – September 2024</span><p style="color:#ffffff;font-size:14px;">Specialized in leadership, investigative techniques, and global law enforcement cooperation.</p></li>
+          <li><strong>Karnaphuli Fertilizer Company (KAFCO)</strong> — Maintenance Engineer<br><span class="meta">Jan 2011 – Jan 2013</span><p style="color:#ffffff;font-size:14px;">Industrial automation, plant maintenance, and process optimization.</p></li>
           <li><strong>KAFCO</strong> — Graduate Trainee Engineer<br><span class="meta">Nov 2009 – Dec 2010</span></li>
           <li><strong>Dhaka International University</strong> — Lecturer, EEE Department<br><span class="meta">Jan 2009 – Oct 2009</span></li>
         </ul>
@@ -153,7 +152,7 @@
           <li><strong>Effective Governance for Sustainable Development</strong> — Macquarie University, Australia<br><span class="meta">December 2016 (2 weeks)</span></li>
           <li><strong>Snaptrends Level-1 Social Media Analyst Course</strong> — Snaptrends Ltd.<br><span class="meta">July 2016 (2 weeks)</span></li>
         </ul>
-        <p class="small">Also: various Incident Response &amp; Evidence Handling trainings &amp; seminars for law enforcement.</p>
+        <p style="color:#ffffff;font-size:14px;">Also: various Incident Response &amp; Evidence Handling trainings &amp; seminars for law enforcement.</p>
       </section>
 
       <!-- ACHIEVEMENTS -->
@@ -172,16 +171,16 @@
       <section id="projects" class="card" tabindex="0">
         <h2>Projects</h2>
         <div class="projects">
-          <div class="project"><strong>Cybercrime Reporting Chatbot</strong><div class="small">Built a cost-effective and secure automated chatbot system for public cybercrime reporting and processing.</div></div>
-          <div class="project"><strong>Cybercrime Threat Analysis System</strong><div class="small">Developed a full-fledged software to analyze cybercrime trends and indicators.</div></div>
-          <div class="project"><strong>Training Platform for Law Enforcement</strong><div class="small">Online portal and i2 Analyst template for IPDR and VPN related cybercrime analysis.</div></div>
+          <div class="project"><strong>Cybercrime Reporting Chatbot</strong><div style="color:#ffffff;font-size:14px;">Built a cost-effective and secure automated chatbot system for public cybercrime reporting and processing.</div></div>
+          <div class="project"><strong>Cybercrime Threat Analysis System</strong><div style="color:#ffffff;font-size:14px;">Developed a full-fledged software to analyze cybercrime trends and indicators.</div></div>
+          <div class="project"><strong>Training Platform for Law Enforcement</strong><div style="color:#ffffff;font-size:14px;">Online portal and i2 Analyst template for IPDR and VPN related cybercrime analysis.</div></div>
         </div>
       </section>
 
       <!-- CONTACT -->
       <section id="contact" class="card" tabindex="0">
         <h2>Contact</h2>
-        <p class="meta">Use the form below to send a message</p>
+        <p style="color:#ffffff;font-size:14px;">Use the form below to send a message</p>
 
         <form class="contact-form" onsubmit="event.preventDefault();alert('This is a placeholder. Hook this to a backend or service like Formspree.');">
           <input type="text" name="name" placeholder="Your name" required>
@@ -194,7 +193,7 @@
         </form>
 
         <hr style="opacity:0.06;margin:14px 0">
-        <div class="small">Connect with me on: 
+        <div style="color:#ffffff;font-size:14px;">Connect with me on: 
           <a href="#" style="color:var(--accent);text-decoration:none">LinkedIn</a> • 
           <a href="#" style="color:var(--accent);text-decoration:none">GitHub</a> • 
           <a href="#" style="color:var(--accent);text-decoration:none">Twitter/X</a>
