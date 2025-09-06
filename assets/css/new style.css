@@ -1,0 +1,13 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(to right, #0d6efd, #0a58ca);
+  color: white;
+}
+
+footer {
+  font-size: 0.9rem;
+}
