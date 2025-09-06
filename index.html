@@ -1,247 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Md Atikul Hoque Prodhan</title>
-  <meta name="description" content="Md Atikul Hoque Prodhan — Cybercrime Investigator, Digital Forensics, Data Analyst, Law Enforcement Leader" />
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-
-  <style>
-    :root {
-      --bg:#0f1724;
-      --card:#0b1320;
-      --muted:#93a0b1;
-      --accent:#0ea5a4;
-      --glass: rgba(255,255,255,0.03);
-      --max-width:1100px;
-      --radius:12px;
-      --transition:200ms ease;
-    }
-
-    /* Reset */
-    * { box-sizing: border-box; margin:0; padding:0; }
-    html, body { height:100%; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: linear-gradient(180deg,var(--bg) 0%, #061021 100%); color: white; }
-    body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-
-    /* Header / Navigation */
-    header { position: fixed; top:0; left:0; right:0; background: linear-gradient(180deg, rgba(5,10,15,0.8), rgba(5,10,15,0.6)); backdrop-filter: blur(6px); z-index:40; border-bottom:1px solid rgba(255,255,255,0.03); }
-    .nav { max-width: var(--max-width); margin:0 auto; display:flex; justify-content: space-between; align-items:center; padding:10px 18px; }
-    .brand { display:flex; gap:12px; align-items:center; }
-    .brand h1 { font-size:16px; margin:0; }
-    .brand .small { font-size:14px; color:white; }
-    nav ul { display:flex; gap:8px; list-style:none; }
-    nav a { display:inline-block; padding:8px 10px; border-radius:8px; color: var(--muted); text-decoration:none; font-weight:600; font-size:14px; }
-    nav a.active, nav a:hover { color: var(--bg); background: var(--accent); box-shadow: 0 6px 18px rgba(14,165,164,0.08); transform: translateY(-1px); }
-
-    main { max-width: var(--max-width); margin:86px auto 48px; padding:20px; min-height: calc(100vh - 160px); }
-
-    /* Grid layout */
-    .grid { display:grid; grid-template-columns:1fr; gap:18px; }
-    @media(min-width:880px) { .grid { grid-template-columns:repeat(2,1fr); } }
-    @media(min-width:1200px) { .grid { grid-template-columns:repeat(3,1fr); } }
-
-    /* Card */
-    .card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03); padding:18px; border-radius: var(--radius); box-shadow:0 6px 30px rgba(2,6,23,0.6); transition: transform var(--transition); }
-    .card:hover { transform: translateY(-6px); }
-    h2 { margin:0 0 10px 0; font-size:18px; }
-    p { margin:0 0 8px 0; line-height:1.45; color:white; font-size:14px; }
-    .meta { font-size:13px; color: var(--muted); margin-bottom:10px; }
-    .list { margin:6px 0 0 0; padding:0; list-style:none; }
-    .list li { padding:8px 0; border-top:1px dashed rgba(255,255,255,0.02); font-size:14px; }
-
-    /* Timeline bullets smaller */
-    .timeline li { list-style-type: disc; margin-left:20px; font-size:13px; }
-
-    /* Projects */
-    .projects { display:flex; flex-direction:column; gap:10px; }
-    .project { padding:10px; border-radius:10px; background: var(--glass); border:1px solid rgba(255,255,255,0.02); font-size:14px; }
-
-    /* Contact */
-    .contact-form { display:grid; gap:8px; }
-    .contact-form input, .contact-form textarea { background:transparent; border:1px solid rgba(255,255,255,0.06); padding:10px; border-radius:8px; color: inherit; }
-    .btn { display:inline-block; padding:10px 14px; border-radius:10px; background: var(--accent); color: var(--bg); font-weight:700; text-decoration:none; border:none; cursor:pointer; }
-
-    /* Footer */
-    footer { max-width: var(--max-width); margin:0 auto 40px; padding:8px 20px; color:var(--muted); text-align:center; font-size:14px; }
-
-    /* Cyan strong */
-    strong { color: cyan; }
-
-    /* Social icons */
-    .social-list { display:flex; gap:12px; margin-top:8px; padding:0; list-style:none; }
-    .social-link { color: var(--accent); font-size:20px; text-decoration:none; display:inline-flex; align-items:center; }
-    .small { font-size:14px; color:white; }
-
-    @media(max-width:640px) {
-      .brand h1 { font-size:14px; }
-      nav ul { gap:6px; }
-      nav a { padding:8px 6px; font-size:13px; }
-    }
-  </style>
+  <meta name="description" content="Md Atikul Hoque Prodhan — Cybercrime Investigator, Digital Forensics, Data Analyst, Law Enforcement Leader">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 
   <!-- Ionicons -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+  <style>
+    :root {
+      --bg: #0f1724;
+      --card: #0b1320;
+      --muted: #ffffff;
+      --accent: #06b6d4;
+      --glass: rgba(255,255,255,0.03);
+      --max-width: 1100px;
+      --radius: 12px;
+      --transition: 300ms ease;
+      --font-small: 0.9rem;
+    }
+
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      font-family: Inter, sans-serif;
+      background: var(--bg);
+      color: var(--muted);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    strong { color: var(--accent); }
+    a { color: var(--accent); text-decoration:none; }
+    a:hover { text-decoration: underline; }
+
+    /* Sidebar social */
+    aside {
+      position: fixed; left: 0; top: 50%; transform: translateY(-50%);
+      display: flex; flex-direction: column; gap: 10px;
+      padding: 10px;
+    }
+    .social-list { list-style:none; display:flex; flex-direction: column; gap: 10px; }
+    .social-link { color: var(--accent); font-size: 1.5rem; text-decoration:none; transition: 0.3s; }
+    .social-link:hover { transform: translateY(-3px); }
+
+    /* Navbar */
+    .navbar {
+      position: fixed; top:0; left:0; right:0; background: linear-gradient(180deg, rgba(5,10,15,0.9), rgba(5,10,15,0.7));
+      backdrop-filter: blur(6px); border-bottom:1px solid rgba(255,255,255,0.05);
+      z-index: 1000;
+    }
+    .navbar-list { display:flex; max-width:var(--max-width); margin:0 auto; padding:10px; gap:10px; list-style:none; flex-wrap: wrap; justify-content:center; }
+    .navbar-link {
+      background: var(--glass); color: var(--muted); padding:8px 12px; border:none; border-radius:10px; cursor:pointer;
+      transition: 0.2s; font-size: var(--font-small);
+    }
+    .navbar-link.active, .navbar-link:hover { background: var(--accent); color: var(--bg); }
+
+    main { max-width: var(--max-width); margin: 80px auto 40px; padding: 0 20px; }
+
+    article { display: none; opacity:0; transform: translateY(20px); transition: all 0.6s ease; }
+    article.active { display: block; opacity:1; transform: translateY(0); margin-bottom: 30px; }
+
+    .card { background: var(--card); padding:20px; border-radius: var(--radius); box-shadow: 0 6px 25px rgba(0,0,0,0.5); }
+    h2, h3, h4 { margin-bottom:10px; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.3rem; }
+    h4 { font-size: 1.1rem; }
+
+    .timeline-list { list-style:none; margin-top:15px; position: relative; padding-left: 30px; }
+    .timeline-list::before {
+      content: '';
+      position: absolute;
+      top:0; left:12px;
+      width:4px;
+      height:100%;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    .timeline-item { margin-bottom: 20px; position: relative; }
+    .timeline-item::before {
+      content:'';
+      position:absolute;
+      left:-18px;
+      top:4px;
+      width:16px;
+      height:16px;
+      border-radius:50%;
+      background: var(--accent);
+      border:2px solid var(--bg);
+    }
+    .timeline-text { font-size: var(--font-small); color: var(--muted); margin-top:5px; }
+
+    .projects .project { background: var(--glass); padding:12px; border-radius:10px; margin-bottom:10px; }
+
+    .contact-form { display: flex; flex-direction: column; gap:10px; }
+    .contact-form input, .contact-form textarea {
+      background: transparent; border:1px solid rgba(255,255,255,0.2); color: var(--muted);
+      padding:10px; border-radius:8px; font-size: var(--font-small);
+    }
+    .btn { background: var(--accent); border:none; padding:10px 14px; border-radius:10px; color: var(--bg); cursor:pointer; font-weight:700; }
+
+    footer { text-align:center; margin:30px 0; font-size: var(--font-small); color: rgba(255,255,255,0.5); }
+
+    @media(max-width:768px) { aside { display:none; } }
+
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="nav">
-    <div class="brand">
-      <h1>Md Atikul Hoque Prodhan</h1>
-      <div class="small">Cybercrime Investigator</div>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#about" class="nav-link" data-target="about">About</a></li>
-        <li><a href="#education" class="nav-link" data-target="education">Education</a></li>
-        <li><a href="#experience" class="nav-link" data-target="experience">Experience</a></li>
-        <li><a href="#certifications" class="nav-link" data-target="certifications">Certifications</a></li>
-        <li><a href="#achievements" class="nav-link" data-target="achievements">Achievements</a></li>
-        <li><a href="#projects" class="nav-link" data-target="projects">Projects</a></li>
-        <li><a href="#contact" class="nav-link" data-target="contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<!-- Sidebar social links -->
+<aside>
+  <ul class="social-list">
+    <li><a href="https://www.linkedin.com/" target="_blank" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+    <li><a href="https://github.com/mdatikulhoque/" target="_blank" class="social-link"><ion-icon name="logo-github"></ion-icon></a></li>
+    <li><a href="#" target="_blank" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+  </ul>
+</aside>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <ul class="navbar-list">
+    <li><button class="navbar-link active" data-nav-link>About</button></li>
+    <li><button class="navbar-link" data-nav-link>Education</button></li>
+    <li><button class="navbar-link" data-nav-link>Experience</button></li>
+    <li><button class="navbar-link" data-nav-link>Certifications</button></li>
+    <li><button class="navbar-link" data-nav-link>Achievements</button></li>
+    <li><button class="navbar-link" data-nav-link>Projects</button></li>
+    <li><button class="navbar-link" data-nav-link>Contact</button></li>
+  </ul>
+</nav>
 
 <main>
-  <div class="grid">
 
-    <!-- About -->
-    <section id="about" class="card" tabindex="0">
-      <h2>About Me</h2>
-      <div class="meta">Cybercrime Investigator • Digital Forensics • Law Enforcement</div>
-      <p>I am a Cybercrime Investigator with extensive experience in engineering and law enforcement. My journey began as a Lecturer at Dhaka International University, then as a Maintenance Engineer at KAFCO, Japan. Currently, I serve in the Bangladesh Police, specializing in cybercrime investigations and digital forensics, with advanced training at the FBI Academy in Virginia.</p>
-      <p class="small">FBI National Academy Graduate • Executive MBA (IBA) • BSc EEE (IUT)</p>
-      <ul class="social-list">
-        <li><a href="https://www.linkedin.com/" target="_blank" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-        <li><a href="https://github.com/mdatikulhoque" target="_blank" class="social-link"><ion-icon name="logo-github"></ion-icon></a></li>
-        <li><a href="https://twitter.com/" target="_blank" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
-      </ul>
-    </section>
+<!-- About -->
+<article class="about active" data-page="about">
+<div class="card">
+<h2>About Me</h2>
+<div class="timeline-text">Cybercrime Investigator • Digital Forensics • Law Enforcement</div>
+<p>I am a Cybercrime Investigator with extensive experience in engineering and law enforcement. My journey began as a Lecturer at Dhaka International University, then as a Maintenance Engineer at KAFCO, Japan. Currently, I serve in the Bangladesh Police, specializing in cybercrime investigations and digital forensics, with advanced training at the FBI Academy in Virginia.</p>
+<p class="timeline-text">FBI National Academy Graduate • Executive MBA (IBA) • BSc EEE (IUT)</p>
+</div>
+</article>
 
-    <!-- Education -->
-    <section id="education" class="card" tabindex="0">
-      <h2>Education</h2>
-      <ul class="list">
-        <li><strong>FBI National Academy Graduate (291 Session)</strong><br><span class="meta">FBI National Academy, Quantico, Virginia, USA | 7 July 2024 – 12 September 2024</span></li>
-        <li><strong>Graduate Certificate in Criminal Justice Education</strong><br><span class="meta">University of Virginia (UVA), USA | 7 July 2024 – 12 September 2024</span></li>
-        <li><strong>MBA (Executive Program)</strong><br><span class="meta">IBA, Dhaka University | October 2019 – May 2021 | CGPA: 3.70 / 4.00</span></li>
-        <li><strong>Master of Police Science</strong><br><span class="meta">Rajshahi University | February 2013 – August 2014 | CGPA: 3.425 / 4.00</span></li>
-        <li><strong>BSc in Electrical &amp; Electronic Engineering</strong><br><span class="meta">Islamic University of Technology (IUT) | Nov 2004 – Nov 2008 | CGPA: 4.61 / 5.00</span></li>
-        <li><strong>Higher Secondary Certificate</strong><br><span class="meta">Rangpur Cadet College | 2002 – 2004 | CGPA: 5.00 / 5.00</span></li>
-        <li><strong>Secondary School Certificate</strong><br><span class="meta">Rangpur Cadet College | 2000 – 2002 | CGPA: 5.00 / 5.00</span></li>
-      </ul>
-    </section>
+<!-- Education -->
+<article class="education" data-page="education">
+<div class="card">
+<h2>Education</h2>
+<ul class="timeline-list">
+<li class="timeline-item"><strong>FBI National Academy Graduate (291 Session)</strong><div class="timeline-text">Quantico, Virginia, USA | 7 July 2024 – 12 September 2024</div></li>
+<li class="timeline-item"><strong>Graduate Certificate in Criminal Justice Education</strong><div class="timeline-text">University of Virginia, USA | 7 July 2024 – 12 September 2024</div></li>
+<li class="timeline-item"><strong>MBA (Executive Program)</strong><div class="timeline-text">IBA, Dhaka University | Oct 2019 – May 2021 | CGPA: 3.70 / 4.00</div></li>
+<li class="timeline-item"><strong>Master of Police Science</strong><div class="timeline-text">Rajshahi University | Feb 2013 – Aug 2014 | CGPA: 3.425 / 4.00</div></li>
+<li class="timeline-item"><strong>BSc in Electrical & Electronic Engineering</strong><div class="timeline-text">Islamic University of Technology (IUT) | Nov 2004 – Nov 2008 | CGPA: 4.61 / 5.00</div></li>
+<li class="timeline-item"><strong>Higher Secondary Certificate</strong><div class="timeline-text">Rangpur Cadet College | 2002 – 2004 | CGPA: 5.00 / 5.00</div></li>
+<li class="timeline-item"><strong>Secondary School Certificate</strong><div class="timeline-text">Rangpur Cadet College | 2000 – 2002 | CGPA: 5.00 / 5.00</div></li>
+</ul>
+</div>
+</article>
 
-    <!-- Experience -->
-    <section id="experience" class="card" tabindex="0">
-      <h2>Professional Experience</h2>
-      <ul class="list">
-        <li><strong>Bangladesh Police</strong> — Additional Superintendent of Police<br><span class="meta">January 2013 - Present (Cybercrime Investigator since 2020)</span><p class="small">Cybercrime investigations, digital forensics, data analyst and law enforcement capacity building.</p></li>
-        <li><strong>FBI National Academy, Quantico</strong> — FBI National Academy Graduate<br><span class="meta">Advanced Leadership Training | July – September 2024</span><p class="small">Specialized in leadership, investigative techniques, and global law enforcement cooperation.</p></li>
-        <li><strong>Karnaphuli Fertilizer Company (KAFCO)</strong> — Maintenance Engineer<br><span class="meta">Jan 2011 – Jan 2013</span><p class="small">Industrial automation, plant maintenance, and process optimization.</p></li>
-        <li><strong>KAFCO</strong> — Graduate Trainee Engineer<br><span class="meta">Nov 2009 – Dec 2010</span></li>
-        <li><strong>Dhaka International University</strong> — Lecturer, EEE Department<br><span class="meta">Jan 2009 – Oct 2009</span></li>
-      </ul>
-    </section>
+<!-- Experience -->
+<article class="experience" data-page="experience">
+<div class="card">
+<h2>Professional Experience</h2>
+<ul class="timeline-list">
+<li class="timeline-item"><strong>Bangladesh Police — Additional Superintendent of Police</strong><div class="timeline-text">January 2013 - Present (Cybercrime Investigator since 2020)<br>Cybercrime investigations, digital forensics, data analyst and law enforcement capacity building.</div></li>
+<li class="timeline-item"><strong>FBI National Academy, Quantico — FBI National Academy Graduate</strong><div class="timeline-text">Advanced Leadership Training | July – September 2024<br>Specialized in leadership, investigative techniques, and global law enforcement cooperation.</div></li>
+<li class="timeline-item"><strong>KAFCO — Maintenance Engineer</strong><div class="timeline-text">Jan 2011 – Jan 2013 | Industrial automation, plant maintenance, and process optimization.</div></li>
+<li class="timeline-item"><strong>KAFCO — Graduate Trainee Engineer</strong><div class="timeline-text">Nov 2009 – Dec 2010</div></li>
+<li class="timeline-item"><strong>Dhaka International University — Lecturer, EEE Department</strong><div class="timeline-text">Jan 2009 – Oct 2009</div></li>
+</ul>
+</div>
+</article>
 
-    <!-- Certifications -->
-    <section id="certifications" class="card" tabindex="0">
-      <h2>Certifications &amp; Trainings</h2>
-      <ul class="list">
-        <li><strong>Exterro ACE Certification — Completed the level-1 certification</strong><br><span class="meta">May 2025</span></li>
-        <li><strong>Cyber Security Training</strong> — Bangladesh Korea Institute of Information and Communication Technology (BKIICT)<br><span class="meta">August 2025 (1 week)</span></li>
-        <li><strong>Capacity Building for Cybercrime Investigation</strong> — Cyber Training Center (CTC), CID, Dhaka<br><span class="meta">June 2025 (2 weeks)</span></li>
-        <li><strong>Training of Trainers in Digital Investigation</strong> — KOICA &amp; SKKU University, South Korea<br><span class="meta">May 2025 (3 weeks)</span></li>
-        <li><strong>Malware Analysis Consultation</strong> — Antiterrorism Assistance Program (ATA), USA<br><span class="meta">April 2022 (1 week)</span></li>
-        <li><strong>Cybercrime Investigation Course</strong> — Dhaka Metropolitan Police<br><span class="meta">March 2022 (4 weeks)</span></li>
-        <li><strong>Criminal Intelligence Analysis Course</strong> — Criminal Investigation Department (CID), Dhaka<br><span class="meta">January 2019 (3 months)</span></li>
-        <li><strong>Investigation on Financial Crime and Forensic Auditing</strong> — CBI, India<br><span class="meta">March 2017 (2 weeks)</span></li>
-        <li><strong>ANACAPA Criminal Intelligence Course</strong> — Interpol &amp; Focus Training (UK) Ltd.<br><span class="meta">February 2018 (1 week)</span></li>
-        <li><strong>Effective Governance for Sustainable Development</strong> — Macquarie University, Australia<br><span class="meta">December 2016 (2 weeks)</span></li>
-        <li><strong>Snaptrends Level-1 Social Media Analyst Course</strong> — Snaptrends Ltd.<br><span class="meta">July 2016 (2 weeks)</span></li>
-      </ul>
-      <p class="small">Also: various Incident Response &amp; Evidence Handling trainings &amp; seminars for law enforcement.</p>
-    </section>
+<!-- Certifications -->
+<article class="certifications" data-page="certifications">
+<div class="card">
+<h2>Certifications & Trainings</h2>
+<ul class="timeline-list">
+<li class="timeline-item"><strong>Exterro ACE Certification — Level-1</strong><div class="timeline-text">May 2025</div></li>
+<li class="timeline-item"><strong>Cyber Security Training</strong><div class="timeline-text">BKIICT, Bangladesh — Aug 2025 (1 week)</div></li>
+<li class="timeline-item"><strong>Capacity Building for Cybercrime Investigation</strong><div class="timeline-text">CTC, CID, Dhaka — June 2025 (2 weeks)</div></li>
+<li class="timeline-item"><strong>Training of Trainers in Digital Investigation</strong><div class="timeline-text">KOICA & SKKU University, South Korea — May 2025 (3 weeks)</div></li>
+<li class="timeline-item"><strong>Malware Analysis Consultation</strong><div class="timeline-text">ATA, USA — April 2022 (1 week)</div></li>
+<li class="timeline-item"><strong>Cybercrime Investigation Course</strong><div class="timeline-text">Dhaka Metropolitan Police — March 2022 (4 weeks)</div></li>
+<li class="timeline-item"><strong>Criminal Intelligence Analysis Course</strong><div class="timeline-text">CID, Dhaka — Jan 2019 (3 months)</div></li>
+<li class="timeline-item"><strong>Investigation on Financial Crime and Forensic Auditing</strong><div class="timeline-text">CBI, India — March 2017 (2 weeks)</div></li>
+<li class="timeline-item"><strong>ANACAPA Criminal Intelligence Course</strong><div class="timeline-text">Interpol & Focus Training (UK) Ltd. — Feb 2018 (1 week)</div></li>
+<li class="timeline-item"><strong>Effective Governance for Sustainable Development</strong><div class="timeline-text">Macquarie University, Australia — Dec 2016 (2 weeks)</div></li>
+<li class="timeline-item"><strong>Snaptrends Level-1 Social Media Analyst Course</strong><div class="timeline-text">Snaptrends Ltd. — July 2016 (2 weeks)</div></li>
+</ul>
+</div>
+</article>
 
-    <!-- Achievements -->
-    <section id="achievements" class="card" tabindex="0">
-      <h2>Achievements</h2>
-      <ul class="list">
-        <li>Awarded <strong>"Best Officer Cup"</strong> for top position at 1-year Basic Police Training Course (out of 176 officers)</li>
-        <li>Received <strong>"Rector Medal"</strong> for top position out of 291 officers at 6-month Foundation Training Course</li>
-        <li>Accoladed twice with the <strong>"President Police Medal"</strong> by the Bangladesh Government</li>
-        <li>Graduated from the FBI National Academy with distinction</li>
-        <li>Successfully led multiple cybercrime investigations resulting in high-profile arrests</li>
-      </ul>
-    </section>
+<!-- Achievements -->
+<article class="achievements" data-page="achievements">
+<div class="card">
+<h2>Achievements</h2>
+<ul class="timeline-list">
+<li class="timeline-item">Awarded <strong>"Best Officer Cup"</strong> for top position at 1-year Basic Police Training Course</li>
+<li class="timeline-item">Received <strong>"Rector Medal"</strong> for top position at 6-month Foundation Training Course</li>
+<li class="timeline-item">Accoladed twice with the <strong>"President Police Medal"</strong> by the Bangladesh Government</li>
+<li class="timeline-item">Graduated from the FBI National Academy with distinction</li>
+<li class="timeline-item">Led multiple cybercrime investigations with high-profile arrests</li>
+</ul>
+</div>
+</article>
 
-    <!-- Projects -->
-    <section id="projects" class="card" tabindex="0">
-      <h2>Projects</h2>
-      <div class="projects">
-        <div class="project"><strong>Cybercrime Reporting Chatbot</strong><div class="small">Built a cost-effective and secure automated chatbot system for public cybercrime reporting and processing.</div></div>
-        <div class="project"><strong>Cybercrime Threat Analysis System</strong><div class="small">Developed a full-fledged software to analyze cybercrime trends and indicators.</div></div>
-        <div class="project"><strong>Training Platform for Law Enforcement</strong><div class="small">Online portal and i2 Analyst template for IPDR and VPN related cybercrime analysis.</div></div>
-      </div>
-    </section>
+<!-- Projects -->
+<article class="projects" data-page="projects">
+<div class="card">
+<h2>Projects</h2>
+<div class="projects">
+<div class="project"><strong>Cybercrime Reporting Chatbot</strong><div class="timeline-text">Automated chatbot system for public cybercrime reporting and processing.</div></div>
+<div class="project"><strong>Cybercrime Threat Analysis System</strong><div class="timeline-text">Software to analyze cybercrime trends and indicators.</div></div>
+<div class="project"><strong>Training Platform for Law Enforcement</strong><div class="timeline-text">Online portal and i2 Analyst template for IPDR and VPN analysis.</div></div>
+</div>
+</div>
+</article>
 
-    <!-- Contact -->
-    <section id="contact" class="card" tabindex="0">
-      <h2>Contact</h2>
-      <p class="meta">Use the form below to send a message</p>
-      <form class="contact-form" onsubmit="event.preventDefault();alert('This is a placeholder. Hook this to a backend or service like Formspree.');">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <input type="text" name="subject" placeholder="Subject">
-        <textarea name="message" rows="5" placeholder="Message"></textarea>
-        <div>
-          <button class="btn" type="submit">Send (placeholder)</button>
-        </div>
-      </form>
-    </section>
+<!-- Contact -->
+<article class="contact" data-page="contact">
+<div class="card">
+<h2>Contact</h2>
+<p class="timeline-text">Use the form below to send a message</p>
+<form class="contact-form" onsubmit="event.preventDefault();alert('This is a placeholder form.');">
+<input type="text" name="name" placeholder="Your name" required>
+<input type="email" name="email" placeholder="Your email" required>
+<input type="text" name="subject" placeholder="Subject">
+<textarea name="message" rows="5" placeholder="Message"></textarea>
+<button class="btn" type="submit">Send</button>
+</form>
+<hr style="opacity:0.1;margin:14px 0">
+<div class="timeline-text">Connect with me on: 
+<a href="https://www.linkedin.com/in/mdatikulhoque/" target="_blank">LinkedIn</a> • 
+<a href="https://github.com/mdatikulhoque/" target="_blank">GitHub</a> • 
+<a href="#">Twitter/X</a>
+</div>
+</div>
+</article>
 
-  </div>
 </main>
 
 <footer>
-  © <span id="year"></span> Md Atikul Hoque Prodhan
+© <span id="year"></span> Md Atikul Hoque Prodhan
 </footer>
 
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 
-  const sections = Array.from(document.querySelectorAll('main section'));
-  const navLinks = Array.from(document.querySelectorAll('a.nav-link'));
+// Navbar section switching with fade animation
+const navLinks = document.querySelectorAll('.navbar-link');
+const articles = document.querySelectorAll('article');
 
-  function updateActiveLink(activeId){
-    navLinks.forEach(a => a.classList.toggle('active', a.dataset.target === activeId));
-  }
-
-  document.querySelectorAll('a.nav-link').forEach(a=>{
-    a.addEventListener('click', e=>{
-      e.preventDefault();
-      const target = document.getElementById(a.dataset.target);
-      if(target) {
-        target.scrollIntoView({behavior:'smooth', block:'start'});
-        updateActiveLink(a.dataset.target);
-        history.replaceState(null,null,'#'+a.dataset.target);
-      }
-    });
+navLinks.forEach(btn => {
+  btn.addEventListener('click', () => {
+    navLinks.forEach(a=>a.classList.remove('active'));
+    btn.classList.add('active');
+    const page = btn.textContent.toLowerCase();
+    articles.forEach(a=> a.classList.remove('active'));
+    const activeArt = document.querySelector(`article.${page}`);
+    if(activeArt) activeArt.classList.add('active');
+    activeArt.scrollIntoView({behavior:'smooth'});
   });
-
-  window.addEventListener('scroll', ()=>{
-    const scrollPos = window.scrollY + 100;
-    for(const sec of sections){
-      if(sec.offsetTop <= scrollPos && sec.offsetTop + sec.offsetHeight > scrollPos){
-        updateActiveLink(sec.id);
-      }
-    }
-  });
+});
 </script>
 
 </body>
