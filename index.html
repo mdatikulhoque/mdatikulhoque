@@ -36,21 +36,6 @@
     a { color: var(--accent); text-decoration:none; }
     a:hover { text-decoration: underline; }
 
-    /* Sidebar social */
-    aside {
-      position: fixed; left: 0; top: 50%; transform: translateY(-50%);
-      display: flex; flex-direction: column; gap: 10px;
-      padding: 10px;
-    }
-    .social-list { list-style:none; display:flex; flex-direction: column; gap: 10px; }
-    .social-link { color: var(--accent); font-size: 1.5rem; text-decoration:none; transition: 0.3s; }
-    .social-link:hover { transform: translateY(-3px); }
-    .highlight {
-      font-weight: bold;
-      color: #ffc107 !important;
-    }
-
-    /* Navbar */
     .navbar {
       position: fixed; top:0; left:0; right:0; background: linear-gradient(180deg, rgba(5,10,15,0.9), rgba(5,10,15,0.7));
       backdrop-filter: blur(6px); border-bottom:1px solid rgba(255,255,255,0.05);
@@ -86,8 +71,8 @@
     }
     .timeline-item { margin-bottom: 20px; position: relative; }
     .timeline-item::before {
-      content:''; position:absolute; left:-18px; top:4px; width:12px; height:12px; border-radius:50%;
-      background: var(--accent); border:2px solid var(--bg);
+      content:''; position:absolute; left:-18px; top:4px; width:12px; height:12px;
+      border-radius:50%; background: var(--accent); border:2px solid var(--bg);
     }
     .timeline-text { font-size: var(--font-small); color: var(--muted); margin-top:5px; }
 
@@ -100,21 +85,25 @@
     }
     .btn { background: var(--accent); border:none; padding:10px 14px; border-radius:10px; color: var(--bg); cursor:pointer; font-weight:700; }
 
+    .highlight { font-weight: bold; color: #ffc107 !important; }
+
+    /* About Section Profile + Social */
+    .about-flex { display:flex; align-items:flex-start; gap:20px; flex-wrap:wrap; }
+    .about-img { flex:0 0 180px; text-align:center; }
+    .about-img img { width:100%; border-radius:12px; object-fit:cover; margin-bottom:10px; }
+    .about-social { display:flex; flex-direction:row; justify-content:center; gap:10px; margin-top:5px; }
+    .about-social a { font-size:1.6rem; color: var(--accent); transition: 0.3s; }
+    .about-social a:hover { color: #ffc107; transform: translateY(-2px); }
+
     footer { text-align:center; margin:30px 0; font-size: var(--font-small); color: rgba(255,255,255,0.5); }
 
-    @media(max-width:768px) { aside { display:none; } }
+    @media(max-width:768px) { 
+      .about-flex { flex-direction:column; align-items:center; text-align:center; }
+      .about-social { justify-content:center; flex-wrap:wrap; }
+    }
   </style>
 </head>
 <body>
-
-<!-- Sidebar social links -->
-<aside>
-  <ul class="social-list">
-    <li><a href="https://www.linkedin.com/" target="_blank" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-    <li><a href="https://github.com/mdatikulhoque/" target="_blank" class="social-link"><ion-icon name="logo-github"></ion-icon></a></li>
-    <li><a href="https://www.twitter.com/" target="_blank" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
-  </ul>
-</aside>
 
 <!-- Navbar -->
 <nav class="navbar">
@@ -133,105 +122,105 @@
 
 <!-- About -->
 <article class="about active" data-page="about">
-  <div class="card" style="display:flex; align-items:flex-start; gap:20px; flex-wrap:wrap;">
-    
-    <!-- Profile Image -->
-    <div style="flex:0 0 180px;">
-      <img src="assets/profile.jpg" alt="Md Atikul Hoque Prodhan" style="width:100%; border-radius:12px; object-fit:cover;">
+  <div class="card about-flex">
+    <div class="about-img">
+      <img src="assets/profile.jpg" alt="Md Atikul Hoque Prodhan">
+      <div class="about-social">
+        <a href="https://www.linkedin.com/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="https://github.com/mdatikulhoque/" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+        <a href="https://www.twitter.com/" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+      </div>
     </div>
-
-    <!-- About Text -->
     <div style="flex:1; min-width:250px;">
       <h2>About Me</h2>
       <div class="timeline-text highlight">
         Cybercrime Investigator • Digital Forensics • Data Analyst • Law Enforcement
       </div>
       <p>
-        I am <strong>Md Atikul Hoque Prodhan</strong>, a Cybercrime Investigator with extensive experience in engineering and law enforcement. My journey began as a Lecturer at Dhaka International University, then as a Maintenance Engineer at Karnaphuli Fertilizer Company Ltd. (KAFCO, owned by Japan). Currently, I serve in the Bangladesh Police, specializing in cybercrime investigations and digital forensics, with advanced training at the FBI Academy in Virginia.
+        I am <strong>Md Atikul Hoque Prodhan</strong>, a Cybercrime Investigator with extensive experience in engineering and law enforcement. My journey began as a Lecturer at Dhaka International University, then as a Maintenance Engineer at KAFCO, Japan. Currently, I serve in the Bangladesh Police, specializing in cybercrime investigations and digital forensics, with advanced training at the FBI Academy in Virginia.
       </p>
       <p class="timeline-text highlight">
         FBI National Academy Graduate • Executive MBA (IBA) • Masters of Police Science • BSc EEE (IUT)
       </p>
     </div>
-
   </div>
 </article>
 
 <!-- Education -->
 <article class="education" data-page="education">
-<div class="card">
-<h2>Education</h2>
-<ul class="timeline-list">
-<li class="timeline-item"><strong>FBI National Academy Graduate (291 Session)</strong><div class="timeline-text">Quantico, Virginia, USA | 7 July 2024 – 12 September 2024</div></li>
-<li class="timeline-item"><strong>Graduate Certificate in Criminal Justice Education</strong><div class="timeline-text">University of Virginia, USA | 7 July 2024 – 12 September 2024</div></li>
-<li class="timeline-item"><strong>MBA (Executive Program)</strong><div class="timeline-text">IBA, Dhaka University | Oct 2019 – May 2021 | CGPA: 3.70 / 4.00</div></li>
-<li class="timeline-item"><strong>Master of Police Science</strong><div class="timeline-text">Rajshahi University | Feb 2013 – Aug 2014 | CGPA: 3.425 / 4.00</div></li>
-<li class="timeline-item"><strong>BSc in Electrical & Electronic Engineering</strong><div class="timeline-text">Islamic University of Technology (IUT) | Nov 2004 – Nov 2008 | CGPA: 4.61 / 5.00</div></li>
-<li class="timeline-item"><strong>Higher Secondary Certificate</strong><div class="timeline-text">Rangpur Cadet College | 2002 – 2004 | CGPA: 5.00 / 5.00</div></li>
-<li class="timeline-item"><strong>Secondary School Certificate</strong><div class="timeline-text">Rangpur Cadet College | 2000 – 2002 | CGPA: 5.00 / 5.00</div></li>
-</ul>
-</div>
+  <div class="card">
+    <h2>Education</h2>
+    <ul class="timeline-list">
+      <li class="timeline-item"><strong>FBI National Academy Graduate (291 Session)</strong><div class="timeline-text">Quantico, Virginia, USA | 7 July 2024 – 12 September 2024</div></li>
+      <li class="timeline-item"><strong>Graduate Certificate in Criminal Justice Education</strong><div class="timeline-text">University of Virginia, USA | 7 July 2024 – 12 September 2024</div></li>
+      <li class="timeline-item"><strong>MBA (Executive Program)</strong><div class="timeline-text">IBA, Dhaka University | Oct 2019 – May 2021 | CGPA: 3.70 / 4.00</div></li>
+      <li class="timeline-item"><strong>Master of Police Science</strong><div class="timeline-text">Rajshahi University | Feb 2013 – Aug 2014 | CGPA: 3.425 / 4.00</div></li>
+      <li class="timeline-item"><strong>BSc in Electrical & Electronic Engineering</strong><div class="timeline-text">Islamic University of Technology (IUT) | Nov 2004 – Nov 2008 | CGPA: 4.61 / 5.00</div></li>
+      <li class="timeline-item"><strong>Higher Secondary Certificate</strong><div class="timeline-text">Rangpur Cadet College | 2002 – 2004 | CGPA: 5.00 / 5.00</div></li>
+      <li class="timeline-item"><strong>Secondary School Certificate</strong><div class="timeline-text">Rangpur Cadet College | 2000 – 2002 | CGPA: 5.00 / 5.00</div></li>
+    </ul>
+  </div>
 </article>
 
 <!-- Experience -->
 <article class="experience" data-page="experience">
-<div class="card">
-<h2>Professional Experience</h2>
-<ul class="timeline-list">
-<li class="timeline-item"><strong>Bangladesh Police — Additional Superintendent of Police</strong><div class="timeline-text">January 2013 - Present (Cybercrime Investigator since 2020)<br>Cybercrime investigations, digital forensics, data analyst and law enforcement capacity building.</div></li>
-<li class="timeline-item"><strong>FBI National Academy, Quantico — FBI National Academy Graduate</strong><div class="timeline-text">Advanced Leadership Training | July – September 2024<br>Specialized in leadership, investigative techniques, and global law enforcement cooperation.</div></li>
-<li class="timeline-item"><strong>KAFCO — Maintenance Engineer</strong><div class="timeline-text">Jan 2011 – Jan 2013 | Industrial automation, plant maintenance, and process optimization.</div></li>
-<li class="timeline-item"><strong>KAFCO — Graduate Trainee Engineer</strong><div class="timeline-text">Nov 2009 – Dec 2010</div></li>
-<li class="timeline-item"><strong>Dhaka International University — Lecturer, EEE Department</strong><div class="timeline-text">Jan 2009 – Oct 2009</div></li>
-</ul>
-</div>
+  <div class="card">
+    <h2>Professional Experience</h2>
+    <ul class="timeline-list">
+      <li class="timeline-item"><strong>Bangladesh Police — Additional Superintendent of Police</strong><div class="timeline-text">Jan 2013 - Present (Cybercrime Investigator since 2020)<br>Cybercrime investigations, digital forensics, data analyst and law enforcement capacity building.</div></li>
+      <li class="timeline-item"><strong>FBI National Academy, Quantico — FBI National Academy Graduate</strong><div class="timeline-text">Advanced Leadership Training | July – September 2024<br>Specialized in leadership, investigative techniques, and global law enforcement cooperation.</div></li>
+      <li class="timeline-item"><strong>KAFCO — Maintenance Engineer</strong><div class="timeline-text">Jan 2011 – Jan 2013 | Industrial automation, plant maintenance, and process optimization.</div></li>
+      <li class="timeline-item"><strong>KAFCO — Graduate Trainee Engineer</strong><div class="timeline-text">Nov 2009 – Dec 2010</div></li>
+      <li class="timeline-item"><strong>Dhaka International University — Lecturer, EEE Department</strong><div class="timeline-text">Jan 2009 – Oct 2009</div></li>
+    </ul>
+  </div>
 </article>
 
 <!-- Certifications -->
 <article class="certifications" data-page="certifications">
-<div class="card">
-<h2>Certifications & Trainings</h2>
-<ul class="timeline-list">
-<li class="timeline-item"><strong>Exterro ACE Certification — Level-1</strong><div class="timeline-text">May 2025</div></li>
-<li class="timeline-item"><strong>Cyber Security Training</strong><div class="timeline-text">BKIICT, Bangladesh — Aug 2025 (1 week)</div></li>
-<li class="timeline-item"><strong>Capacity Building for Cybercrime Investigation</strong><div class="timeline-text">Cyber Training Center, CID, Dhaka — June 2025 (2 weeks)</div></li>
-<li class="timeline-item"><strong>Training of Trainers in Digital Investigation</strong><div class="timeline-text">KOICA & SKKU University, South Korea — May 2025 (3 weeks)</div></li>
-<li class="timeline-item"><strong>Malware Analysis Consultation</strong><div class="timeline-text">Antiterrorism Assistance Program (ATA), USA — April 2022 (1 week)</div></li>
-<li class="timeline-item"><strong>Cybercrime Investigation Course</strong><div class="timeline-text">Dhaka Metropolitan Police, Dhaka — March 2022 (4 weeks)</div></li>
-<li class="timeline-item"><strong>International Cybercrime Fundamentals Training</strong><div class="timeline-text">Australia Federal Police (AFP) — August 2021 (1 month)</div></li>
-<li class="timeline-item"><strong>Criminal Intelligence Analysis Course</strong><div class="timeline-text">Criminal Investigation Department (CID), Dhaka — Jan 2019 (3 months)</div></li>
-<li class="timeline-item"><strong>ANACAPA Criminal Intelligence Course</strong><div class="timeline-text">Interpol & Focus Training (UK) Ltd. — Feb 2018 (1 week)</div></li>
-<li class="timeline-item"><strong>Investigation on Financial Crime and Forensic Auditing</strong><div class="timeline-text">CBI Academy, India — March 2017 (2 weeks)</div></li>
-<li class="timeline-item"><strong>Effective Governance for Sustainable Development</strong><div class="timeline-text">Macquarie University, Australia — Dec 2016 (2 weeks)</div></li>
-<li class="timeline-item"><strong>Snaptrends Level-1 Social Media Analyst Course</strong><div class="timeline-text">Snaptrends Ltd. — July 2016 (2 weeks)</div></li>
-</ul>
-</div>
+  <div class="card">
+    <h2>Certifications & Trainings</h2>
+    <ul class="timeline-list">
+      <li class="timeline-item"><strong>Exterro ACE Certification — Level-1</strong><div class="timeline-text">May 2025</div></li>
+      <li class="timeline-item"><strong>Cyber Security Training</strong><div class="timeline-text">BKIICT, Bangladesh — Aug 2025 (1 week)</div></li>
+      <li class="timeline-item"><strong>Capacity Building for Cybercrime Investigation</strong><div class="timeline-text">Cyber Training Center, CID, Dhaka — June 2025 (2 weeks)</div></li>
+      <li class="timeline-item"><strong>Training of Trainers in Digital Investigation</strong><div class="timeline-text">KOICA & SKKU University, South Korea — May 2025 (3 weeks)</div></li>
+      <li class="timeline-item"><strong>Malware Analysis Consultation</strong><div class="timeline-text">Antiterrorism Assistance Program (ATA), USA — April 2022 (1 week)</div></li>
+      <li class="timeline-item"><strong>Cybercrime Investigation Course</strong><div class="timeline-text">Dhaka Metropolitan Police, Dhaka — March 2022 (4 weeks)</div></li>
+      <li class="timeline-item"><strong>International Cybercrime Fundamentals Training</strong><div class="timeline-text">Australia Federal Police (AFP) — August 2021 (1 month)</div></li>
+      <li class="timeline-item"><strong>Criminal Intelligence Analysis Course</strong><div class="timeline-text">CID, Dhaka — Jan 2019 (3 months)</div></li>
+      <li class="timeline-item"><strong>ANACAPA Criminal Intelligence Course</strong><div class="timeline-text">Interpol & Focus Training (UK) Ltd. — Feb 2018 (1 week)</div></li>
+      <li class="timeline-item"><strong>Investigation on Financial Crime and Forensic Auditing</strong><div class="timeline-text">CBI Academy, India — March 2017 (2 weeks)</div></li>
+      <li class="timeline-item"><strong>Effective Governance for Sustainable Development</strong><div class="timeline-text">Macquarie University, Australia — Dec 2016 (2 weeks)</div></li>
+      <li class="timeline-item"><strong>Snaptrends Level-1 Social Media Analyst Course</strong><div class="timeline-text">Snaptrends Ltd. — July 2016 (2 weeks)</div></li>
+    </ul>
+  </div>
 </article>
 
 <!-- Achievements -->
 <article class="achievements" data-page="achievements">
-<div class="card">
-<h2>Achievements</h2>
-<ul class="timeline-list">
-<li class="timeline-item">Awarded <strong>"Best Officer Cup"</strong> for securing <strong>top position</strong> at 1-year Basic Police Training Course (out of 176 police officers)</li>
-<li class="timeline-item">Received <strong>"Rector Medal"</strong> for securing <strong>top position</strong> at 6-month Foundation Training Course (out of 291 cadre officers)</li>
-<li class="timeline-item">Accoladed twice with the <strong>"President Police Medal"</strong> by the Bangladesh Government for outstanding contribution in job field</li>
-<li class="timeline-item">Graduated from the FBI National Academy with distinction</li>
-<li class="timeline-item">Led multiple cybercrime investigations with high-profile arrests</li>
-</ul>
-</div>
+  <div class="card">
+    <h2>Achievements</h2>
+    <ul class="timeline-list">
+      <li class="timeline-item">Awarded <strong>"Best Officer Cup"</strong> for <strong>top position</strong> at 1-year Basic Police Training Course (out of 176 police officers)</li>
+      <li class="timeline-item">Received <strong>"Rector Medal"</strong> for <strong>top position</strong> at 6-month Foundation Training Course (out of 291 cadre officers)</li>
+      <li class="timeline-item">Accoladed twice with the <strong>"President Police Medal"</strong> by the Bangladesh Government for outstanding contribution in job field</li>
+      <li class="timeline-item">Graduated from the FBI National Academy with distinction</li>
+      <li class="timeline-item">Led multiple cybercrime investigations with high-profile arrests</li>
+    </ul>
+  </div>
 </article>
 
 <!-- Projects -->
 <article class="projects" data-page="projects">
-<div class="card">
-<h2>Projects</h2>
-<div class="projects">
-<div class="project"><strong>Cybercrime Reporting Chatbot</strong><div class="timeline-text">Built an automated chatbot system for public cybercrime reporting and processing.</div></div>
-<div class="project"><strong>Cybercrime Threat Analysis System</strong><div class="timeline-text">Built a software to analyze cybercrime trends and indicators.</div></div>
-<div class="project"><strong>Training Platform for Law Enforcement</strong><div class="timeline-text">Online portal and developed i2 Analyst template for IPDR and VPN analysis.</div></div>
-</div>
-</div>
+  <div class="card">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project"><strong>Cybercrime Reporting Chatbot</strong><div class="timeline-text">Built an automated chatbot system for public cybercrime reporting and processing.</div></div>
+      <div class="project"><strong>Cybercrime Threat Analysis System</strong><div class="timeline-text">Built a software to analyze cybercrime trends and indicators.</div></div>
+      <div class="project"><strong>Training Platform for Law Enforcement</strong><div class="timeline-text">Online portal and developed i2 Analyst template for IPDR and VPN analysis.</div></div>
+    </div>
+  </div>
 </article>
 
 <!-- Contact -->
@@ -249,13 +238,13 @@
       <button class="btn" type="submit">Send</button>
     </form>
 
-<hr style="opacity:0.1;margin:14px 0">
-<div class="timeline-text">Connect with me on: 
-<a href="https://www.linkedin.com/" target="_blank">LinkedIn</a> • 
-<a href="https://github.com/mdatikulhoque/" target="_blank">GitHub</a> • 
-<a href="https://www.twitter.com/" target="_blank">Twitter/X</a>
-</div>
-</div>
+    <hr style="opacity:0.1;margin:14px 0">
+    <div class="timeline-text">Connect with me on: 
+      <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a> • 
+      <a href="https://github.com/mdatikulhoque/" target="_blank">GitHub</a> • 
+      <a href="https://www.twitter.com/" target="_blank">Twitter/X</a>
+    </div>
+  </div>
 </article>
 
 </main>
@@ -267,7 +256,7 @@
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Navbar section switching with fade animation
+// Navbar switching
 const navLinks = document.querySelectorAll('.navbar-link');
 const articles = document.querySelectorAll('article');
 
@@ -276,10 +265,8 @@ navLinks.forEach(btn => {
     navLinks.forEach(a=>a.classList.remove('active'));
     btn.classList.add('active');
     const page = btn.textContent.toLowerCase();
-    articles.forEach(a=> a.classList.remove('active'));
-    const activeArt = document.querySelector(`article.${page}`);
-    if(activeArt) activeArt.classList.add('active');
-    activeArt.scrollIntoView({behavior:'smooth'});
+    articles.forEach(article => article.classList.remove('active'));
+    document.querySelector(`article.${page}`).classList.add('active');
   });
 });
 </script>
