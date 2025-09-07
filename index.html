@@ -36,9 +36,12 @@
     a { color: var(--accent); text-decoration:none; }
     a:hover { text-decoration: underline; }
 
+    /* Navbar with glass effect */
     .navbar {
-      position: fixed; top:0; left:0; right:0; background: linear-gradient(180deg, rgba(5,10,15,0.9), rgba(5,10,15,0.7));
-      backdrop-filter: blur(6px); border-bottom:1px solid rgba(255,255,255,0.05);
+      position: fixed; top:0; left:0; right:0; 
+      background: rgba(15,23,36,0.85);
+      backdrop-filter: blur(6px); 
+      border-bottom:1px solid rgba(255,255,255,0.05);
       z-index: 1000;
     }
     .navbar-list { display:flex; max-width:var(--max-width); margin:0 auto; padding:10px; gap:10px; list-style:none; flex-wrap: wrap; justify-content:center; }
@@ -48,7 +51,12 @@
     }
     .navbar-link.active, .navbar-link:hover { background: var(--accent); color: var(--bg); }
 
-    main { max-width: var(--max-width); margin: 80px auto 40px; padding: 0 20px; }
+    /* Main top padding to avoid navbar overlap */
+    main { 
+      max-width: var(--max-width); 
+      margin: 80px auto 40px; 
+      padding: 80px 20px 20px; /* desktop default */
+    }
 
     article { display: none; opacity:0; transform: translateY(20px); transition: all 0.6s ease; }
     article.active { display: block; opacity:1; transform: translateY(0); margin-bottom: 30px; }
@@ -89,15 +97,8 @@
 
     /* About Section Profile + Social */
     .about-flex { display:flex; align-items:flex-start; gap:20px; flex-wrap:wrap; }
-    .about-img { flex:0 0 180px; text-align:center; }
-    .about-img img {
-      width: 180px;
-      max-width: 180px;
-      height: auto;
-      border-radius:12px;
-      object-fit:cover;
-      margin-bottom:10px;
-    }
+    .about-img { flex:0 0 180px; text-align:center; } /* fixed 180px */
+    .about-img img { width:180px; max-width:180px; border-radius:12px; object-fit:cover; margin-bottom:10px; } /* fixed 180px */
     .about-social { display:flex; flex-direction:row; justify-content:center; gap:10px; margin-top:5px; }
     .about-social a { font-size:1.6rem; color: var(--accent); transition: 0.3s; }
     .about-social a:hover { color: #ffc107; transform: translateY(-2px); }
@@ -105,6 +106,7 @@
     footer { text-align:center; margin:30px 0; font-size: var(--font-small); color: rgba(255,255,255,0.5); }
 
     @media(max-width:768px) { 
+      main { padding: 120px 20px 20px; } /* extra top padding for mobile */
       .about-flex { flex-direction:column; align-items:center; text-align:center; }
       .about-social { justify-content:center; flex-wrap:wrap; }
     }
@@ -265,14 +267,15 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // Navbar switching
 const navLinks = document.querySelectorAll('.navbar-link');
-const pages = document.querySelectorAll('article[data-page]');
-navLinks.forEach((btn, index) => {
+const articles = document.querySelectorAll('article');
+
+navLinks.forEach(btn => {
   btn.addEventListener('click', () => {
-    navLinks.forEach(b => b.classList.remove('active'));
+    navLinks.forEach(a=>a.classList.remove('active'));
     btn.classList.add('active');
-    pages.forEach((page,i)=>{
-      if(i===index) page.classList.add('active'); else page.classList.remove('active');
-    });
+    const page = btn.textContent.toLowerCase();
+    articles.forEach(article => article.classList.remove('active'));
+    document.querySelector(`article.${page}`).classList.add('active');
   });
 });
 </script>
