@@ -90,7 +90,14 @@
     /* About Section Profile + Social */
     .about-flex { display:flex; align-items:flex-start; gap:20px; flex-wrap:wrap; }
     .about-img { flex:0 0 180px; text-align:center; }
-    .about-img img { width:100%; border-radius:12px; object-fit:cover; margin-bottom:10px; }
+    .about-img img {
+      width: 180px;
+      max-width: 180px;
+      height: auto;
+      border-radius:12px;
+      object-fit:cover;
+      margin-bottom:10px;
+    }
     .about-social { display:flex; flex-direction:row; justify-content:center; gap:10px; margin-top:5px; }
     .about-social a { font-size:1.6rem; color: var(--accent); transition: 0.3s; }
     .about-social a:hover { color: #ffc107; transform: translateY(-2px); }
@@ -258,15 +265,14 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // Navbar switching
 const navLinks = document.querySelectorAll('.navbar-link');
-const articles = document.querySelectorAll('article');
-
-navLinks.forEach(btn => {
+const pages = document.querySelectorAll('article[data-page]');
+navLinks.forEach((btn, index) => {
   btn.addEventListener('click', () => {
-    navLinks.forEach(a=>a.classList.remove('active'));
+    navLinks.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const page = btn.textContent.toLowerCase();
-    articles.forEach(article => article.classList.remove('active'));
-    document.querySelector(`article.${page}`).classList.add('active');
+    pages.forEach((page,i)=>{
+      if(i===index) page.classList.add('active'); else page.classList.remove('active');
+    });
   });
 });
 </script>
