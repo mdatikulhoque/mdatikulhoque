@@ -51,11 +51,11 @@
     }
     .navbar-link.active, .navbar-link:hover { background: var(--accent); color: var(--bg); }
 
-    /* Main top padding to avoid navbar overlap */
+    /* Main top padding to allow profile picture to almost touch navbar */
     main { 
       max-width: var(--max-width); 
-      margin: 80px auto 40px; 
-      padding: 80px 20px 20px; /* desktop default */
+      margin: 0 auto; 
+      padding: 60px 20px 20px; 
     }
 
     article { display: none; opacity:0; transform: translateY(20px); transition: all 0.6s ease; }
@@ -95,20 +95,21 @@
 
     .highlight { font-weight: bold; color: #ffc107 !important; }
 
-    /* About Section Profile + Social */
-    .about-flex { display:flex; align-items:flex-start; gap:20px; flex-wrap:wrap; }
-    .about-img { flex:0 0 180px; text-align:center; } /* fixed 180px */
-    .about-img img { width:180px; max-width:180px; border-radius:12px; object-fit:cover; margin-bottom:10px; } /* fixed 180px */
-    .about-social { display:flex; flex-direction:row; justify-content:center; gap:10px; margin-top:5px; }
-    .about-social a { font-size:1.6rem; color: var(--accent); transition: 0.3s; }
-    .about-social a:hover { color: #ffc107; transform: translateY(-2px); }
+    /* About Section Profile + Name + Social */
+    .about-flex { display:flex; align-items:flex-start; gap:20px; flex-wrap:wrap; margin-top:-20px; }
+    .about-img { flex:0 0 180px; text-align:center; }
+    .about-img img { width:180px; max-width:180px; border-radius:12px; object-fit:cover; }
+    .about-name { font-weight:bold; color:#ffffff; font-size:1.1rem; margin-top:10px; }
+    .about-social { display:flex; flex-direction:row; justify-content:center; gap:15px; margin-top:10px; }
 
     footer { text-align:center; margin:30px 0; font-size: var(--font-small); color: rgba(255,255,255,0.5); }
 
     @media(max-width:768px) { 
-      main { padding: 120px 20px 20px; } /* extra top padding for mobile */
-      .about-flex { flex-direction:column; align-items:center; text-align:center; }
-      .about-social { justify-content:center; flex-wrap:wrap; }
+      main { padding: 100px 20px 20px; } 
+      .about-flex { flex-direction:column; align-items:center; text-align:center; margin-top:-10px; }
+      .about-social { justify-content:center; flex-wrap:wrap; gap:12px; }
+      .navbar-link { font-size: 0.8rem; padding:6px 10px; }
+      .navbar-list { justify-content:center; flex-wrap:wrap; gap:6px; } /* allows 2-line navbar on mobile */
     }
   </style>
 </head>
@@ -134,6 +135,7 @@
   <div class="card about-flex">
     <div class="about-img">
       <img src="assets/profile.jpg" alt="Md Atikul Hoque Prodhan">
+      <div class="about-name">Md Atikul Hoque Prodhan</div>
       <div class="about-social">
         <a href="mailto:mdatikul1136@gmail.com" target="_blank"><ion-icon name="mail-outline"></ion-icon></a>
         <a href="https://github.com/mdatikulhoque/" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
@@ -250,33 +252,30 @@
     <hr style="opacity:0.1;margin:14px 0">
     <div class="timeline-text">Connect with me on: 
       <a href="mailto:mdatikul1136@gmail.com" target="_blank"><ion-icon name="mail-outline"></ion-icon></a> • 
-      <a href="https://github.com/mdatikulhoque/" target="_blank">GitHub</a> • 
-      <a href="https://www.twitter.com/mdatikulhoque" target="_blank">Twitter/X</a>
+      <a href="https://github.com/mdatikulhoque/" target="_blank"><ion-icon name="logo-github"></ion-icon></a> • 
+      <a href="https://www.twitter.com/mdatikulhoque" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
     </div>
   </div>
 </article>
 
-</main>
-
 <footer>
-© <span id="year"></span> Md Atikul Hoque Prodhan
+  &copy; 2025 Md Atikul Hoque Prodhan. All Rights Reserved.
 </footer>
 
 <script>
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// Navbar switching
-const navLinks = document.querySelectorAll('.navbar-link');
+const links = document.querySelectorAll('[data-nav-link]');
 const articles = document.querySelectorAll('article');
 
-navLinks.forEach(btn => {
-  btn.addEventListener('click', () => {
-    navLinks.forEach(a=>a.classList.remove('active'));
-    btn.classList.add('active');
-    const page = btn.textContent.toLowerCase();
-    articles.forEach(article => article.classList.remove('active'));
-    document.querySelector(`article.${page}`).classList.add('active');
-  });
+links.forEach(link=>{
+  link.addEventListener('click',()=>{
+    links.forEach(l=>l.classList.remove('active'));
+    link.classList.add('active');
+    const page = link.textContent.toLowerCase();
+    articles.forEach(article=>{
+      if(article.dataset.page === page){ article.classList.add('active'); } 
+      else{ article.classList.remove('active'); }
+    })
+  })
 });
 </script>
 
