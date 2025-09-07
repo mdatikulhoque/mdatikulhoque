@@ -127,7 +127,6 @@ h4 { font-size: 1.1rem; }
   gap: 6px; 
 }
 
-/* Heading, highlight, and paragraph adjustments */
 .about-flex h2 { margin: 0; }
 .timeline-text.highlight { margin: 0; }
 .about-flex > div:nth-child(2) p { 
@@ -160,7 +159,22 @@ footer { text-align:center; margin:30px 0; font-size: var(--font-small); color: 
 
 /* Mobile adjustments */
 @media(max-width:768px) { 
-  main { padding: 60px 20px 20px; } 
+  main { 
+    padding: 140px 20px 20px; /* increased top padding to avoid navbar overlap */ 
+  } 
+
+  /* Navbar adjustments for 2-line display */
+  .navbar-list { 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 6px; 
+  }
+  .navbar-link { 
+    font-size: 0.8rem; 
+    padding: 6px 10px; 
+  }
+
+  /* About section adjustments */
   .about-flex { 
     flex-direction: column; 
     align-items: center; 
@@ -174,12 +188,12 @@ footer { text-align:center; margin:30px 0; font-size: var(--font-small); color: 
     gap: 4px; 
   }
   .about-flex > div:nth-child(2) p { 
-    flex-grow: 0; /* normal flow on mobile */
+    flex-grow: 0; 
   }
   .about-name { 
     white-space: normal; 
     line-height: 1.2; 
-    font-size:1.1rem; 
+    font-size: 1.1rem; 
   }
   .about-social { 
     justify-content: center; 
@@ -190,6 +204,7 @@ footer { text-align:center; margin:30px 0; font-size: var(--font-small); color: 
   .timeline-text.highlight { margin: 0; }
 }
 </style>
+
 
 </head>
 <body>
