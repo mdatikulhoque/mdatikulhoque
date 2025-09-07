@@ -46,10 +46,9 @@
     .social-link { color: var(--accent); font-size: 1.5rem; text-decoration:none; transition: 0.3s; }
     .social-link:hover { transform: translateY(-3px); }
     .highlight {
-  font-weight: bold;
-  color: #ffc107 !important;
-}
-
+      font-weight: bold;
+      color: #ffc107 !important;
+    }
 
     /* Navbar */
     .navbar {
@@ -87,15 +86,8 @@
     }
     .timeline-item { margin-bottom: 20px; position: relative; }
     .timeline-item::before {
-      content:'';
-      position:absolute;
-      left:-18px;
-      top:4px;
-      width:12px;
-      height:12px;
-      border-radius:50%;
-      background: var(--accent);
-      border:2px solid var(--bg);
+      content:''; position:absolute; left:-18px; top:4px; width:12px; height:12px; border-radius:50%;
+      background: var(--accent); border:2px solid var(--bg);
     }
     .timeline-text { font-size: var(--font-small); color: var(--muted); margin-top:5px; }
 
@@ -111,7 +103,6 @@
     footer { text-align:center; margin:30px 0; font-size: var(--font-small); color: rgba(255,255,255,0.5); }
 
     @media(max-width:768px) { aside { display:none; } }
-
   </style>
 </head>
 <body>
@@ -142,12 +133,28 @@
 
 <!-- About -->
 <article class="about active" data-page="about">
-<div class="card">
-<h2>About Me</h2>
-<div class="timeline-text highlight">Cybercrime Investigator • Digital Forensics • Data Analyst • Law Enforcement</div>
-<p>I am <strong>Md Atikul Hoque Prodhan</strong>, a Cybercrime Investigator with extensive experience in engineering and law enforcement. My journey began as a Lecturer at Dhaka International University, then as a Maintenance Engineer at Karnaphuli Fertilizer Company Ltd. (KAFCO, owned by Japan). Currently, I serve in the Bangladesh Police, specializing in cybercrime investigations and digital forensics, with advanced training at the FBI Academy in Virginia.</p>
-<p class="timeline-text highlight">FBI National Academy Graduate • Executive MBA (IBA) • Masters of Police Science • BSc EEE (IUT)</p>
-</div>
+  <div class="card" style="display:flex; align-items:flex-start; gap:20px; flex-wrap:wrap;">
+    
+    <!-- Profile Image -->
+    <div style="flex:0 0 180px;">
+      <img src="assets/profile.jpg" alt="Md Atikul Hoque Prodhan" style="width:100%; border-radius:12px; object-fit:cover;">
+    </div>
+
+    <!-- About Text -->
+    <div style="flex:1; min-width:250px;">
+      <h2>About Me</h2>
+      <div class="timeline-text highlight">
+        Cybercrime Investigator • Digital Forensics • Data Analyst • Law Enforcement
+      </div>
+      <p>
+        I am <strong>Md Atikul Hoque Prodhan</strong>, a Cybercrime Investigator with extensive experience in engineering and law enforcement. My journey began as a Lecturer at Dhaka International University, then as a Maintenance Engineer at Karnaphuli Fertilizer Company Ltd. (KAFCO, owned by Japan). Currently, I serve in the Bangladesh Police, specializing in cybercrime investigations and digital forensics, with advanced training at the FBI Academy in Virginia.
+      </p>
+      <p class="timeline-text highlight">
+        FBI National Academy Graduate • Executive MBA (IBA) • Masters of Police Science • BSc EEE (IUT)
+      </p>
+    </div>
+
+  </div>
 </article>
 
 <!-- Education -->
@@ -190,10 +197,11 @@
 <li class="timeline-item"><strong>Capacity Building for Cybercrime Investigation</strong><div class="timeline-text">Cyber Training Center, CID, Dhaka — June 2025 (2 weeks)</div></li>
 <li class="timeline-item"><strong>Training of Trainers in Digital Investigation</strong><div class="timeline-text">KOICA & SKKU University, South Korea — May 2025 (3 weeks)</div></li>
 <li class="timeline-item"><strong>Malware Analysis Consultation</strong><div class="timeline-text">Antiterrorism Assistance Program (ATA), USA — April 2022 (1 week)</div></li>
-<li class="timeline-item"><strong>Cybercrime Investigation Course</strong><div class="timeline-text">Dhaka Metropolitan Police — March 2022 (4 weeks)</div></li>
+<li class="timeline-item"><strong>Cybercrime Investigation Course</strong><div class="timeline-text">Dhaka Metropolitan Police, Dhaka — March 2022 (4 weeks)</div></li>
+<li class="timeline-item"><strong>International Cybercrime Fundamentals Training</strong><div class="timeline-text">Australia Federal Police (AFP) — August 2021 (1 month)</div></li>
 <li class="timeline-item"><strong>Criminal Intelligence Analysis Course</strong><div class="timeline-text">Criminal Investigation Department (CID), Dhaka — Jan 2019 (3 months)</div></li>
-<li class="timeline-item"><strong>Investigation on Financial Crime and Forensic Auditing</strong><div class="timeline-text">CBI Academy, India — March 2017 (2 weeks)</div></li>
 <li class="timeline-item"><strong>ANACAPA Criminal Intelligence Course</strong><div class="timeline-text">Interpol & Focus Training (UK) Ltd. — Feb 2018 (1 week)</div></li>
+<li class="timeline-item"><strong>Investigation on Financial Crime and Forensic Auditing</strong><div class="timeline-text">CBI Academy, India — March 2017 (2 weeks)</div></li>
 <li class="timeline-item"><strong>Effective Governance for Sustainable Development</strong><div class="timeline-text">Macquarie University, Australia — Dec 2016 (2 weeks)</div></li>
 <li class="timeline-item"><strong>Snaptrends Level-1 Social Media Analyst Course</strong><div class="timeline-text">Snaptrends Ltd. — July 2016 (2 weeks)</div></li>
 </ul>
@@ -205,8 +213,8 @@
 <div class="card">
 <h2>Achievements</h2>
 <ul class="timeline-list">
-<li class="timeline-item">Awarded <strong>"Best Officer Cup"</strong> for <strong>top position</strong> at 1-year Basic Police Training Course (out of 176 police officers)</li>
-<li class="timeline-item">Received <strong>"Rector Medal"</strong> for <strong>top position</strong> at 6-month Foundation Training Course (out of 291 cadre officers)</li>
+<li class="timeline-item">Awarded <strong>"Best Officer Cup"</strong> for securing <strong>top position</strong> at 1-year Basic Police Training Course (out of 176 police officers)</li>
+<li class="timeline-item">Received <strong>"Rector Medal"</strong> for securing <strong>top position</strong> at 6-month Foundation Training Course (out of 291 cadre officers)</li>
 <li class="timeline-item">Accoladed twice with the <strong>"President Police Medal"</strong> by the Bangladesh Government for outstanding contribution in job field</li>
 <li class="timeline-item">Graduated from the FBI National Academy with distinction</li>
 <li class="timeline-item">Led multiple cybercrime investigations with high-profile arrests</li>
@@ -228,16 +236,19 @@
 
 <!-- Contact -->
 <article class="contact" data-page="contact">
-<div class="card">
-<h2>Contact</h2>
-<p class="timeline-text">Use the form below to send a message</p>
-<form class="contact-form" onsubmit="event.preventDefault();alert('This is a placeholder form.');">
-<input type="text" name="name" placeholder="Your name" required>
-<input type="email" name="email" placeholder="Your email" required>
-<input type="text" name="subject" placeholder="Subject">
-<textarea name="message" rows="5" placeholder="Message"></textarea>
-<button class="btn" type="submit">Send</button>
-</form>
+  <div class="card">
+    <h2>Contact</h2>
+    <p class="timeline-text">Use the form below to send a message</p>
+    
+    <form class="contact-form" action="https://formspree.io/f/xqadwqoz" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <input type="text" name="subject" placeholder="Subject">
+      <textarea name="message" rows="5" placeholder="Message" required></textarea>
+      <input type="hidden" name="_subject" value="New message from your portfolio website">
+      <button class="btn" type="submit">Send</button>
+    </form>
+
 <hr style="opacity:0.1;margin:14px 0">
 <div class="timeline-text">Connect with me on: 
 <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a> • 
